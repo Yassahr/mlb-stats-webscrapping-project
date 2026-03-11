@@ -9,7 +9,8 @@ st.title("2020-2023 Baseball Statistical Breakdown Based on Team and Player")
 
 #Figure 1
 #Pitching Grouped By Stat + Normalized for values of different magnitude
-pitching_grouped_by_year=pitching_stats.groupby(['Year', 'Team','Statistics'])['Stat Number'].sum().reset_index()
+pitching_grouped_by_year=pitching_stats.groupby(['Year','Name','Statistics'])['Stat Number'].sum().reset_index()
+print(pitching_grouped_by_year.columns)
 #Dropdown
 all_years = sorted(set(pitching_grouped_by_year['Year'].unique()) | set(hitting_stats['Year'].unique()))
 year = st.selectbox('Select Year', all_years)
@@ -19,14 +20,14 @@ pitching_grouped_by_year['Percentage'] = (pitching_grouped_by_year['Stat Number'
 
 year_filter = pitching_grouped_by_year[pitching_grouped_by_year['Year'] == year]
 
-#This chart shows each statistics and which teams dominate the stats in each catergory
+#This chart shows each statistics and which Players dominate the stats in each catergory
 fig = px.bar(
     year_filter,
     x='Statistics',
     y='Percentage',
-    color='Team',
-    text=year_filter['Percentage'].round(1).astype(str) + '%',
-    title=f'{year} Pitching Stats By Team',
+    color='Name',
+    text=year_filter['Stat Number'],
+    title=f'{year} Pitching Stats By Player',
     labels={'Percentage': '% Percent', 'Statistics': 'Statistics'},
 )
 
