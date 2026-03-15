@@ -97,6 +97,16 @@ pip install -r requirements.txt
 ---
 
 ## Running the Project
+To run the project from scratch(with no DB)
+webscrapping.py -> baseball_to_sql.py -> sql_join_baseball_stats.py -> visualizations 
+
+To only see Streamlit Dashboard run: 
+
+```bash
+streamlit run visualizations.py
+```
+
+
 
 ### Web Scraping & CSV Export
 
@@ -117,7 +127,7 @@ python baseball_to_sql.py
 ```
 
 This creates `baseball-stats_20_23.db` with **3 tables**:
-
+View using SQLite Viewer Extension
 | Table | Description |
 |---|---|
 | `hitting` | Top hitting stats per season (2020–2023) |
@@ -129,9 +139,8 @@ This creates `baseball-stats_20_23.db` with **3 tables**:
 You can query the database directly from the command line using SQLite:
 
 ```bash
-sqlite3 baseball-stats_20_23.db
+python sql_join_baseball_stats.py
 ```
-
 
 ### Launching the Dashboard
 
@@ -181,4 +190,4 @@ Future improvements to expand the scope and depth of this project:
 
 ## Author
 
-[Yassah Reed] — [https://github.com/Yassahr]
+(Yassah Reed)[https://github.com/Yassahr]

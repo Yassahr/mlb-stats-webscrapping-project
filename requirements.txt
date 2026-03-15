@@ -6,3 +6,9 @@ seaborn
 dash
 gunicorn
 streamlit
+sqlite3
+selenium
+webdriver_manager
+io
+lxml
+PySocks

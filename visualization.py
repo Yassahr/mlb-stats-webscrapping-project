@@ -5,6 +5,7 @@ from sql_join_baseball_stats import *
 
 hitting_stats=table_hitting_standing_join()
 pitching_stats=table_pitching_standing_join()
+
 st.title("2020-2023 Baseball Statistical Breakdown Based on Team and Player")
 
 #Figure 1
