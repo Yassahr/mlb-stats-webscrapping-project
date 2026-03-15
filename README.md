@@ -136,7 +136,7 @@ View using SQLite Viewer Extension
 
 ### Querying the Database
 
-You can query the database directly from the command line using SQLite:
+You can query the database. This is a script to JOIN the SQL tables and create Datafranes:
 
 ```bash
 python sql_join_baseball_stats.py
