@@ -6,9 +6,7 @@ seaborn
 dash
 gunicorn
 streamlit
-sqlite3
 selenium
-webdriver_manager
-io
+webdriver-manager
 lxml
 PySocks
