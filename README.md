@@ -103,7 +103,7 @@ webscrapping.py -> baseball_to_sql.py -> sql_join_baseball_stats.py -> visualiza
 To only see Streamlit Dashboard run: 
 
 ```bash
-streamlit run visualizations.py
+streamlit run visualization.py
 ```
 
 
