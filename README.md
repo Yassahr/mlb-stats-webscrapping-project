@@ -54,7 +54,7 @@ mlb-stats-webscrapping-project/
 ├── db 
   ├── baseball-stats_20_23.db         # Holds scraped data in 3 tables
 ├──sql_join_baseball_stats.py         #Joins Standing<>Hitting table Standing<>Pitching and returned Dataframe 
-├── visualizations.py         #Streamlit dashboard application
+├── visualization.py         #Streamlit dashboard application
 ├── requirements.txt         #Project dependencies
 └── README.md
 ```
@@ -147,7 +147,7 @@ python sql_join_baseball_stats.py
 Start the Streamlit dashboard with:
 
 ```bash
-streamlit run visualizations.py
+streamlit run visualization.py
 ```
 
 The app will open in your browser at `http://localhost:8501`.
