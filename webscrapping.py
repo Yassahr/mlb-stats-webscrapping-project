@@ -138,7 +138,7 @@ def baseball_scrape():
     standings_df['WP']=standings_df['WP'].astype('float')
     standings_df['Year']=standings_df['Year'].astype('int')
     standings_df['League']=standings_df['League'].astype('str')
-    standings_df.to_csv(standing_states, mode="a", header=True, index=False)
+    standings_df.to_csv(standing_states, mode="w", header=True, index=False)
 
     driver.quit()
     print('Files loaded to CSV')
