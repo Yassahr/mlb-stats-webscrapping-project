@@ -75,13 +75,13 @@ cd baseball-web-scraping
 **macOS / Linux:**
 ```bash
 python3 -m venv .venv
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 **Windows:**
 ```bash
-python -m venv venv
-venv\Scripts\activate
+python -m venv .venv
+.venv\Scripts\activate
 ```
 
 > You should see `(venv)` appear in your terminal prompt once the environment is active.
