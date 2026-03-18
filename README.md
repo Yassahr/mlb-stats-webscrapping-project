@@ -67,7 +67,7 @@ mlb-stats-webscrapping-project/
 
 ```bash
 git clone https://github.com/Yassahr/mlb-stats-webscrapping-project.git
-cd baseball-web-scraping
+cd mlb-stats-webscrapping-project
 ```
 
 ### Set Up Virtual Environment
