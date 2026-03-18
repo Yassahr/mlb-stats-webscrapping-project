@@ -3,6 +3,7 @@ import pandas as pd
 import os
 
 def create_database():
+    os.makedirs('./db', exist_ok=True)
     if not os.path.exists('./db/baseball-stats_20_23.db'):
         try:
                 conn = sqlite3.connect('./db/baseball-stats_20_23.db')
