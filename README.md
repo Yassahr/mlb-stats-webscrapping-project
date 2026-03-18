@@ -36,7 +36,7 @@ This project uses Selenium to collect data points on historical stats from the [
 | **SQLite** | Local relational database storage |
 | **Streamlit** | Interactive web dashboard |
 | **Plotly Express** | Interactive charts and graphs |
-| **Matplotlib** | Static data visualizations |
+| **Matplotlib** | Static data ations |
 
 ---
 
@@ -54,7 +54,7 @@ mlb-stats-webscrapping-project/
 ├── db 
   ├── baseball-stats_20_23.db         # Holds scraped data in 3 tables
 ├──sql_join_baseball_stats.py         #Joins Standing<>Hitting table Standing<>Pitching and returned Dataframe 
-├── visualization.py         #Streamlit dashboard application
+├── ation.py         #Streamlit dashboard application
 ├── requirements.txt         #Project dependencies
 └── README.md
 ```
@@ -99,13 +99,6 @@ pip install -r requirements.txt
 ## Running the Project
 To run the project from scratch(with no DB)
 webscrapping.py -> baseball_to_sql.py -> sql_join_baseball_stats.py -> visualizations 
-
-To only see Streamlit Dashboard run: 
-
-```bash
-streamlit run visualization.py
-```
-
 
 
 ### Web Scraping & CSV Export
