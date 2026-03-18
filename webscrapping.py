@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
-
+import os
 
 LEAGUES = {
     'a': range(2020, 2023), 
@@ -58,6 +58,7 @@ def baseball_scrape():
 
     total_pages = sum(len(list(yrs)) for yrs in LEAGUES.values())
     scraped = 0
+    
 
     for league_code, years in LEAGUES.items():
         league_name = "AL" if league_code == "a" else "NL"
@@ -106,7 +107,7 @@ def baseball_scrape():
     hitting_df["Stat Number"]= hitting_df["Stat Number"].astype('float')
     print(hitting_df.head(10))
     hitting_df.info()
-    hitting_df.to_csv(hitting_stats, mode="a", header=True, index=False)
+    hitting_df.to_csv(hitting_stats, header=True, index=False)
 
 
 #data cleaning pitch data
@@ -118,7 +119,7 @@ def baseball_scrape():
     pitching_df=pitching_df.drop(columns=['Top'])
     pitching_df=pitching_df.loc[1:]
     pitching_df["Stat Number"]= pitching_df["Stat Number"].astype('float')
-    pitching_df.to_csv(pictching_stats, mode="a", header=True, index=False)
+    pitching_df.to_csv(pictching_stats, header=True, index=False)
 
 
 #data cleaning for standing  
@@ -138,7 +139,7 @@ def baseball_scrape():
     standings_df['WP']=standings_df['WP'].astype('float')
     standings_df['Year']=standings_df['Year'].astype('int')
     standings_df['League']=standings_df['League'].astype('str')
-    standings_df.to_csv(standing_states, mode="w", header=True, index=False)
+    standings_df.to_csv(standing_states, header=True, index=False)
 
     driver.quit()
     print('Files loaded to CSV')
